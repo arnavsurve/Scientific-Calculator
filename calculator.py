@@ -38,6 +38,10 @@ elif choice == "2":
 elif choice == '3':
     print(num1,"*",num2,"=", multiply(num1,num2))
 elif choice == '4':
+    if num2 == 0:
+        print("You cannot divide by 0!")
+        raise SystemExit
+
     print(num1,"/",num2,"=", divide(num1,num2))
 elif choice == "5":
     print(num1,"**",num2,"=", exponent(num1,num2))
