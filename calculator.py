@@ -41,11 +41,18 @@ elif choice == '4':
     if num2 == 0:
         print("You cannot divide by 0!")
         raise SystemExit
-
+    
     print(num1,"/",num2,"=", divide(num1,num2))
 elif choice == "5":
     print(num1,"**",num2,"=", exponent(num1,num2))
 elif choice == "6":
+    if num1 < 0:
+        print("Negative numbers are not supported!")
+        raise SystemExit
+    elif num2 < 0:
+        print("Negative numbers are not supported!")
+        raise SystemExit
+
     print(num2,"\/`",num1,"=", root(num1,num2))
 else:
    print("Invalid input")
