@@ -18,6 +18,7 @@ def exponent(x, y):
 def root(x, y):
     return x ** (1/y)
 
+
 print ("Select operation:")
 print ("1. Addition")
 print ("2. Subtraction")
@@ -25,8 +26,10 @@ print ("3. Multiplication")
 print ("4. Division")
 print ("5. Exponent")
 print ("6. Root")
+print ("7. Factorial (Second number input does not count)")
 
-choice = input("Enter choice: (1/2/3/4/5/6):")
+
+choice = input("Enter choice: (1/2/3/4/5/6/7):")
 
 num1 = int(input("Enter first number: "))
 num2 = int(input("Enter second number: "))
@@ -54,6 +57,9 @@ elif choice == "6":
         raise SystemExit
 
     print(num2,"\/`",num1,"=", root(num1,num2))
+elif choice == "7":
+    from math import factorial
+    print(factorial(num1))
 else:
    print("Invalid input")
 
