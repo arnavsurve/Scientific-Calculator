@@ -62,4 +62,3 @@ elif choice == "7":
     print(factorial(num1))
 else:
    print("Invalid input")
-
