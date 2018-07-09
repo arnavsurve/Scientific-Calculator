@@ -59,6 +59,6 @@ elif choice == "6":
     print(num2,"sqr",num1,"=", root(num1,num2))
 elif choice == "7":
     from math import factorial
-    print(factorial(num1))
+    print(num1,"! =",factorial(num1))
 else:
    print("Invalid input")
