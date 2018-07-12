@@ -13,7 +13,7 @@ class arnavButtons:
         self.firstNumberLabel = Label(frame, text="Enter first number: ")
         self.firstNumberLabel.grid(row=1, column=0, sticky=W)
 
-        self.firstEntry = Entry(root)
+        self.firstEntry = Entry(frame)
         self.firstEntry.grid(row=1, column=1)
 
 
