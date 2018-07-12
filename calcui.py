@@ -1,22 +1,27 @@
 from tkinter import *
 
-class calculator:
-    
+
+class arnavButtons:
+
     def __init__(self, master):
         frame = Frame(master)
-        frame.pack()
+        frame.pack(side=LEFT)
 
-        self.exitButton = Button(frame, text="OFF", command=self.exitProgram)
-        self.exitButton.grid(row=0, column=0, sticky=W)
+        self.quitButton = Button(frame, text="Quit", command=frame.quit)
+        self.quitButton.grid(row=0, column=0)
 
-    def exitProgram(self):
-        raise SystemExit
+        self.firstNumberLabel = Label(frame, text="Enter first number: ")
+        self.firstNumberLabel.grid(row=1, column=0, sticky=W)
+
+        self.firstEntry = Entry(root)
+        self.firstEntry.grid(row=1, column=1)
 
 
 root = Tk()
 
 
-b = calculator(root)
+b = arnavButtons(root)
 
 
 root.mainloop()
+
