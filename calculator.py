@@ -56,7 +56,7 @@ elif choice == "6":
         print("Negative numbers are not supported!")
         raise SystemExit
 
-    print(num2,"sqr",num1,"=", root(num1,num2))
+    print(num2,"root",num1,"=", root(num1,num2))
 elif choice == "7":
     from math import factorial
     print(num1,"! =",factorial(num1))
