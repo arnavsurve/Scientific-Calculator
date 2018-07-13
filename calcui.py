@@ -15,6 +15,14 @@ class arnavButtons:
 
         self.firstEntry = Entry(frame)
         self.firstEntry.grid(row=1, column=1)
+        Entry.get(self)
+        
+        self.secondNumberLabel = Label(frame, text="Enter second number: ")
+        self.secondNumberLabel.grid(row=2, column=0, sticky=W)
+
+        self.secondEntry = Entry(frame)
+        self.secondEntry.grid(row=2, column=1)
+        
 
 
 root = Tk()
