@@ -17,12 +17,6 @@ class arnavButtons:
 
         self.firstEntry = Entry(frame, bg="#34435b", highlightbackground="#021635", fg="white")
         self.firstEntry.grid(row=1, column=1)
-        
-        def ugh():
-            print(self.firstEntry.get())
-
-        self.ughButton = Button(frame,text="ugh", command = ugh)
-        self.ughButton.grid(row=5, column=1, sticky=S)
 
         self.secondNumberLabel = Label(frame, text="Enter second number: ", bg="#021635", fg="white")
         self.secondNumberLabel.grid(row=2, column=0, sticky=E)
@@ -30,43 +24,52 @@ class arnavButtons:
         self.secondEntry = Entry(frame, bg="#34435b", highlightbackground="#021635", fg="white")
         self.secondEntry.grid(row=2, column=1)
 
-        # Functions for the math functions (wtf)
-        # def ugh():
-        #     print(self.firstEntry.get())
-        #
-        # self.ughButton = Button(frame,text="ugh", command = ugh)
-        # self.ughButton.grid(row=5, column=1, sticky=S)
-
-        # def add():
-        #     print(int(self.firstEntry.get()) + int(self.secondEntry.get())
 
 
-
+        # Buttons for math functions along with the functions
         
-        # Buttons for math functions
-        self.addButton = Button(frame, text=" + ", highlightbackground="#021635", fg="white", command=add)
-        self.addButton.grid(row=0, column=2, pady=3)
-
         def add():
-            print(int(self.firstEntry.get()) + int(self.secondEntry.get())
+             print(int(self.firstEntry.get()) + int(self.secondEntry.get()))
+        
+        self.addButton = Button(frame, text=" + ", highlightbackground="#021635", fg="white", command=add)
+        self.addButton.grid(row=0, column=2, pady=3, padx=3)
+        
+        def subtract():
+             print(int(self.firstEntry.get()) - int(self.secondEntry.get()))
+        
+        self.subtractButton = Button(frame, text=" - ", highlightbackground="#021635", fg="white", command=subtract)
+        self.subtractButton.grid(row=1, column=2, pady=3, padx=10)
 
-        self.subtractButton = Button(frame, text=" - ", highlightbackground="#021635", fg="white")
-        self.subtractButton.grid(row=1, column=2, pady=3)
+        def multiply():
+             print(int(self.firstEntry.get()) * int(self.secondEntry.get()))
+        
+        self.multiplyButton = Button(frame, text=" * ", highlightbackground="#021635", fg="white", command=multiply)
+        self.multiplyButton.grid(row=2, column=2, pady=3, padx=10)
 
-        self.multiplyButton = Button(frame, text=" * ", highlightbackground="#021635", fg="white")
-        self.multiplyButton.grid(row=2, column=2, pady=3)
+        def divide():
+             print(int(self.firstEntry.get()) / int(self.secondEntry.get()))
+        
+        self.divideButton = Button(frame, text=" / ", highlightbackground="#021635", fg="white", command=divide)
+        self.divideButton.grid(row=3, column=2, pady=3, padx=10)
 
-        self.divideButton = Button(frame, text=" / ", highlightbackground="#021635", fg="white")
-        self.divideButton.grid(row=3, column=2, pady=3)
+        def exponent():
+             print(int(self.firstEntry.get()) ** int(self.secondEntry.get()))
+        
+        self.exponentButton = Button(frame, text=" ^ ", highlightbackground="#021635", fg="white", command=exponent)
+        self.exponentButton.grid(row=4, column=2, pady=3, padx=10)
 
-        self.exponentButton = Button(frame, text=" ^ ", highlightbackground="#021635", fg="white")
-        self.exponentButton.grid(row=4, column=2, pady=3)
-
-        self.rootButton = Button(frame, text=" root ", highlightbackground="#021635", fg="white")
+        def root():
+             print((int(self.firstEntry.get())) ** (1/(int(self.secondEntry.get()))))
+        
+        self.rootButton = Button(frame, text=" root ", highlightbackground="#021635", fg="white", command=root)
         self.rootButton.grid(row=5, column=2, pady=3, padx=3)
 
-        self.factorialButton = Button(frame, text=" ! ", highlightbackground="#021635", fg="white")
-        self.factorialButton.grid(row=6, column=2, pady=3)
+        def factorial():
+             from math import factorial
+             print(factorial(int(self.firstEntry.get())))
+        
+        self.factorialButton = Button(frame, text=" ! ", highlightbackground="#021635", fg="white", command=factorial)
+        self.factorialButton.grid(row=6, column=2, pady=3, padx=10)
 
 
 root = Tk()
