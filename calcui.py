@@ -24,7 +24,9 @@ class arnavButtons:
         self.secondEntry = Entry(frame, bg="#34435b", highlightbackground="#021635", fg="white")
         self.secondEntry.grid(row=2, column=1)
 
-        
+        self.outputLabel = Label(frame, text=(int(self.firstEntry.get()) + int(self.secondEntry.get())))
+        self.outputLabel.grid(row=2, column=3)
+
 
         # Buttons for math functions along with the functions
         
@@ -70,13 +72,6 @@ class arnavButtons:
         
         self.factorialButton = Button(frame, text=" ! ", highlightbackground="#021635", fg="white", command=factorial)
         self.factorialButton.grid(row=6, column=2, pady=3, padx=10)
-
-
-
-        self.outputLabel = Label(frame, text=(int(self.firstEntry.get()) + int(self.secondEntry.get())))
-        self.outputLabel.grid(row=2, column=3)
-
-
 
 
 root = Tk()
