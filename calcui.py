@@ -24,13 +24,13 @@ class arnavButtons:
         self.secondEntry = Entry(frame, bg="#34435b", highlightbackground="#021635", fg="white")
         self.secondEntry.grid(row=2, column=1)
 
-
+        
 
         # Buttons for math functions along with the functions
         
         def add():
              print(int(self.firstEntry.get()) + int(self.secondEntry.get()))
-        
+
         self.addButton = Button(frame, text=" + ", highlightbackground="#021635", fg="white", command=add)
         self.addButton.grid(row=0, column=2, pady=3, padx=3)
         
@@ -47,8 +47,8 @@ class arnavButtons:
         self.multiplyButton.grid(row=2, column=2, pady=3, padx=10)
 
         def divide():
-             print(int(self.firstEntry.get()) / int(self.secondEntry.get()))
-        
+            print(int(self.firstEntry.get()) / int(self.secondEntry.get()))
+             
         self.divideButton = Button(frame, text=" / ", highlightbackground="#021635", fg="white", command=divide)
         self.divideButton.grid(row=3, column=2, pady=3, padx=10)
 
@@ -70,6 +70,13 @@ class arnavButtons:
         
         self.factorialButton = Button(frame, text=" ! ", highlightbackground="#021635", fg="white", command=factorial)
         self.factorialButton.grid(row=6, column=2, pady=3, padx=10)
+
+
+
+        self.outputLabel = Label(frame, text=(int(self.firstEntry.get()) + int(self.secondEntry.get())))
+        self.outputLabel.grid(row=2, column=3)
+
+
 
 
 root = Tk()
