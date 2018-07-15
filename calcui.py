@@ -24,8 +24,8 @@ class arnavButtons:
         self.secondEntry = Entry(frame, bg="#34435b", highlightbackground="#021635", fg="white")
         self.secondEntry.grid(row=2, column=1)
 
-        self.outputLabel = Label(frame, text=(int(self.firstEntry.get()) + int(self.secondEntry.get())))
-        self.outputLabel.grid(row=2, column=3)
+#        self.outputLabel = Label(frame, text=(int(self.firstEntry.get()) + int(self.secondEntry.get())))
+#        self.outputLabel.grid(row=2, column=3)
 
 
         # Buttons for math functions along with the functions
